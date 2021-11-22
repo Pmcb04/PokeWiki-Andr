@@ -7,10 +7,16 @@ import com.devgram.pokewiki.model.Achievement
 interface AchievementDao {
 
     @Query("SELECT * FROM achievements")
-    fun getAll() : List<Achievement>
+    fun getAll() : MutableList<Achievement>
 
     @Query("SELECT * FROM achievements WHERE id = :id")
     fun get(id : Int) : Achievement
+
+    @Query("SELECT * FROM achievements WHERE name = :name and user = :user")
+    fun get(name : String, user: String) : Achievement
+
+    @Query("SELECT * FROM achievements WHERE user = :user")
+    fun getAll(user : String) : MutableList<Achievement>
 
     @Update
     fun update(achievement: Achievement)

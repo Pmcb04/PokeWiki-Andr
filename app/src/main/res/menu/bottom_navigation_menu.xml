@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/teams"
+        android:enabled="true"
+        android:icon="@drawable/pokeball"
+        android:title=""/>
+    <item
+        android:id="@+id/pokemon_favorites"
+        android:enabled="true"
+        android:icon="@drawable/heart"
+        android:title=""/>
+    <item
+        android:id="@+id/pokemon_search"
+        android:enabled="true"
+        android:icon="@drawable/search"
+        android:title=""/>
+    <item
+        android:id="@+id/achievement_list"
+        android:enabled="true"
+        android:icon="@drawable/cup"
+        android:title=""/>
+    <item
+        android:id="@+id/user"
+        android:enabled="true"
+        android:icon="@drawable/user"
+        android:title=""/>
+</menu>

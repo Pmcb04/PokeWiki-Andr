@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_team">You haven\'t team yet, create one !!</string>
+    <string name="no_favorite_pokemon">You haven\'t favorite yet, create one !!</string>
+    <string name="cannot_create_team">Para crear el equipo rellene primero todos los huecos del equipo</string>
+    <string name="accept">Accept</string>
+    <string name="team_name">Team Name</string>
+    <string name="team_name_not_found">Debe de poner un nombre a el equipo</string>
+    <string name="title_team_name_not_found">Nombre no definido</string>
+    <string name="title_cannot_create_team">Equipo no completado</string>
+    <string name="edit">Edit</string>
+    <string name="create_1_team_title">Primer equipo</string>
+    <string name="create_1_team_descr">Crea tu primer equipo pokemon</string>
+</resources>

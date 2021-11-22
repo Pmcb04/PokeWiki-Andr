@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PokeWiki</string>
+    <string name="create">Create</string>
+    <string name="search">Search here…</string>
+    <string name="strengths">Strengths</string>
+    <string name="weakness">Weakness</string>
+    <string name="movements">Movements</string>
+    <string name="name_table">Name</string>
+    <string name="type_table">Type</string>
+    <string name="pp_table">PP</string>
+    <string name="power_table">Power</string>
+    <string name="compare">COMPARE</string>
+    <string name="no_team">You haven\'t team yet, create one !!</string>
+    <string name="no_favorite_pokemon">You haven\'t favorite yet, create one !!</string>
+    <string name="add">ADD</string>
+
+    <!-- Comparison -->
+    <string name="comp_hp">HP</string>
+    <string name="comp_attack">Attack</string>
+    <string name="comp_defense">Defense</string>
+    <string name="comp_speed">Speed</string>
+    <string name="comp_spattack">Sp. Attack</string>
+    <string name="comp_spdefense">Sp. Defense</string>
+
+    <!-- Preferences -->
+    <string name="language">Idioma</string>
+    <string name="dark_mode">Modo Oscuro</string>
+    <string name="loc_eng">Inglés</string>
+    <string name="loc_esp">Español</string>
+
+    <!-- Pokemon Team -->
+    <string name="cannot_create_team">Para crear el equipo rellene primero todos los huecos del equipo</string>
+    <string name="accept">Accept</string>
+    <string name="team_name">Team Name</string>
+    <string name="team_name_not_found">Debe de poner un nombre a el equipo</string>
+    <string name="title_team_name_not_found">Nombre no definido</string>
+    <string name="title_cannot_create_team">Equipo no completado</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails</string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+    <!-- User -->
+    <string name="SignOff">Sign Off</string>
+    <string name="textUserName">UserName</string>
+    <string name="textEmail">Email</string>
+    <string name="textPassword">password</string>
+
+    <!-- SignIn&SignUp -->
+    <string name="textSignName">Name</string>
+    <string name="textSignPassword">Password</string>
+    <string name="textSignEmail">Email</string>
+    <string name="SignUp">Sign Up</string>
+    <string name="SignIn">Sign In</string>
+    <string name="SignUpError">This name already exists</string>
+    <string name="SignInNameError">Incorrect name</string>
+    <string name="SignInPasswordError">Incorrect password</string>
+    <string name="edit">Edit</string>
+    <string name="create_1_team_title">Primer equipo</string>
+    <string name="create_1_team_descr">Crea tu primer equipo pokemon</string>
+
+</resources>

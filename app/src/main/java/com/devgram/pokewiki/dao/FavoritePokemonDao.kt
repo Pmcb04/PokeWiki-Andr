@@ -1,24 +1,22 @@
 package com.devgram.pokewiki.dao
 
 import androidx.room.*
-import com.devgram.pokewiki.model.FavoritePokemon
+import com.devgram.pokewiki.model.Pokemon
+import com.devgram.pokewiki.model.PokemonFavorite
 
 @Dao
 interface FavoritePokemonDao {
 
-    @Query("SELECT * FROM achievements")
-    fun getAll() : List<FavoritePokemon>
+    @Query("SELECT id FROM pokemon_favorite WHERE id_pokemon = :id_pokemon and user = :user")
+    fun isFavorite(id_pokemon : Int, user : String) : Int
 
-    @Query("SELECT * FROM achievements WHERE id = :id ")
-    fun get(id : Int) : FavoritePokemon
-
-    @Update
-    fun update(achievement: FavoritePokemon)
+    @Query("SELECT * FROM pokemon_favorite WHERE user = :user")
+    fun getAll(user : String) : MutableList<PokemonFavorite>
 
     @Insert
-    fun insert(achievement : FavoritePokemon)
+    fun insert(pokemonFavorite : PokemonFavorite)
 
-    @Delete
-    fun delete(achievement : FavoritePokemon)
+    @Query("DELETE FROM pokemon_favorite WHERE id = :id")
+    fun delete(id : Int)
 
 }

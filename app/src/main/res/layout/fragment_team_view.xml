@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:baselineAligned="false">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="end|center_horizontal"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/pokemon_1"
+            layout="@layout/pokemon_content"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+
+        <include
+            android:id="@+id/pokemon_2"
+            layout="@layout/pokemon_content"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+
+        <include
+            android:id="@+id/pokemon_3"
+            layout="@layout/pokemon_content"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="start|center_horizontal"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/pokemon_4"
+            layout="@layout/pokemon_content"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+
+        <include
+            android:id="@+id/pokemon_5"
+            layout="@layout/pokemon_content"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+
+        <include
+            android:id="@+id/pokemon_6"
+            layout="@layout/pokemon_content"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

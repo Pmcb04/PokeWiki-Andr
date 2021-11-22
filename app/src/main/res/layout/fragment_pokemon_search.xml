@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:drawableStart="@drawable/ic_baseline_search_24"
+            android:hint="@string/search" />
+
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_weight="3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_baseline_menu_24" />
+
+
+    </LinearLayout>
+
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        app:singleLine="true">
+
+        <!-- Chips can be declared here, or added dynamically. -->
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <include
+        android:id="@+id/pokemon_search_list"
+        layout="@layout/pokemon_list_recyclerview" />
+
+</LinearLayout>

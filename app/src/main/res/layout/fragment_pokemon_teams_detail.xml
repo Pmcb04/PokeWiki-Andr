@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.PokemonTeamsDetailFragment"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/arrow_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <Button
+            android:id="@+id/create_team"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:text="@string/create" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/team_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="30dp"
+            android:gravity="center"
+            android:hint="@string/team_name"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <TableRow
+                android:id="@+id/row_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+
+                <include
+                    android:id="@+id/pokemon_1"
+                    layout="@layout/pokemon_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <include
+                    android:id="@+id/pokemon_2"
+                    layout="@layout/pokemon_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <include
+                    android:id="@+id/pokemon_3"
+                    layout="@layout/pokemon_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:id="@+id/row_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+
+                <include
+                    android:id="@+id/pokemon_4"
+                    layout="@layout/pokemon_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <include
+                    android:id="@+id/pokemon_5"
+                    layout="@layout/pokemon_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <include
+                    android:id="@+id/pokemon_6"
+                    layout="@layout/pokemon_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:id="@+id/row_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+            </TableRow>
+
+        </TableLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>

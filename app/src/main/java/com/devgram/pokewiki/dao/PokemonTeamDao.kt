@@ -6,19 +6,21 @@ import com.devgram.pokewiki.model.PokemonTeam
 @Dao
 interface PokemonTeamDao {
 
-    @Query("SELECT * FROM achievements")
-    fun getAll() : List<PokemonTeam>
+    @Query("SELECT * FROM teams_pokemon")
+    fun getAll() : MutableList<PokemonTeam>
 
-    @Query("SELECT * FROM achievements WHERE id = :id ")
+    @Query("SELECT * FROM teams_pokemon WHERE id = :id ")
     fun get(id : Int) : PokemonTeam
 
+    @Query("SELECT * FROM teams_pokemon WHERE user = :user")
+    fun getAll(user : String) : MutableList<PokemonTeam>
+
     @Update
-    fun update(achievement: PokemonTeam)
+    fun update(pokemonTeam: PokemonTeam)
 
     @Insert
-    fun insert(achievement : PokemonTeam)
+    fun insert(pokemonTeam : PokemonTeam)
 
     @Delete
-    fun delete(achievement : PokemonTeam)
-
+    fun delete(pokemonTeam : PokemonTeam)
 }
