@@ -122,6 +122,12 @@ class PokemonRecyclerViewAdapter(
         notifyDataSetChanged()
     }
 
+    fun loadClear(list: MutableList<Pokemon>) {
+        pokemonList.clear()
+        pokemonList.addAll(list)
+        notifyDataSetChanged()
+    }
+
     private fun getDrawableIconType(type:String) : Int{
         return when(type){
             "bug" -> R.drawable.type_bug

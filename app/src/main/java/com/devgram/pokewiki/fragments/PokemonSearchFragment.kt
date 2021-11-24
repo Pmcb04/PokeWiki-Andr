@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
@@ -22,6 +23,7 @@ import com.devgram.pokewiki.util.PokemonNetworkLoaderRunnable
 import java.lang.ClassCastException
 import android.widget.Toast
 import com.devgram.pokewiki.model.PokemonTeam
+import com.devgram.pokewiki.util.PokemonSearchNetworkLoaderRunnable
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -48,7 +50,7 @@ class PokemonSearchFragment : Fragment() {
     private lateinit var mCallback: SelectionListenerPokemon
     private lateinit var mRecyclerView: RecyclerView
     private lateinit var mAdapter: PokemonRecyclerViewAdapter
-    private lateinit var menu : ImageView
+    private lateinit var lupa : ImageView
 
     private var offset : Int = 0
 
@@ -72,19 +74,10 @@ class PokemonSearchFragment : Fragment() {
         val v = inflater.inflate(R.layout.fragment_pokemon_search, container, false)
 
         search = v.findViewById(R.id.search)
-        search.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
-            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
-            override fun afterTextChanged(s: Editable) {
-                filter(s.toString())
-            }
-        })
 
-        menu = v.findViewById(R.id.menu)
-        menu.setOnClickListener {
-            MaterialAlertDialogBuilder(requireContext())
-                .setView(inflater.inflate(R.layout.fragment_pokemon_search_menu, null))
-                .show()
+        lupa = v.findViewById(R.id.lupa)
+        lupa.setOnClickListener {
+            if(search.text.toString().isNotEmpty()) filter(search.text.toString())
         }
 
         mRecyclerView = v.findViewById(R.id.pokemon_list) as RecyclerView
@@ -126,14 +119,18 @@ class PokemonSearchFragment : Fragment() {
 
     private fun filter(text: String) {
 
-        // TODO : ver que hacer para filtrar los componentes con la API
-        /* val filteredList: ArrayList<ExampleItem> = ArrayList()
-         for (item in mExampleList) {
-             if (item.getText1().toLowerCase().contains(text.toLowerCase())) {
-                 filteredList.add(item)
-             }
-         }
-         mAdapter.filterList(filteredList)*/
+        AppExecutors.instance!!.networkIO().execute(
+            PokemonSearchNetworkLoaderRunnable(
+                object : OnPokemonLoadedListener {
+                    override fun onPokemonLoaded(pokemon: MutableList<Pokemon>) {}
+                    override fun onPokemonSearchLoaded(pokemon: Pokemon?) {
+                        if(pokemon != null){
+                            println("pokemon no nulo")
+                            mAdapter.loadClear(mutableListOf(pokemon))
+                        }
+                    }
+                }, text)
+        )
     }
 
     private fun addPokemon(){
@@ -144,6 +141,7 @@ class PokemonSearchFragment : Fragment() {
                     override fun onPokemonLoaded(pokemon: MutableList<Pokemon>) {
                         mAdapter.load(pokemon)
                     }
+                    override fun onPokemonSearchLoaded(pokemon: Pokemon?) {}
                 }, LIMIT, offset)
         )
     }
