@@ -146,9 +146,9 @@ class PokemonDetailsFragment : Fragment() {
         yAxis.setLabelCount(5, false)
         yAxis.textSize = 9f
         yAxis.axisMinimum = 0f
-        yAxis.axisMaximum = 80f
+        yAxis.axisMaximum = 165f
         yAxis.setDrawLabels(false)
-
+/*
         val l: Legend = chart.legend
         l.verticalAlignment = Legend.LegendVerticalAlignment.TOP
         l.horizontalAlignment = Legend.LegendHorizontalAlignment.CENTER
@@ -156,9 +156,9 @@ class PokemonDetailsFragment : Fragment() {
         l.setDrawInside(false)
         l.typeface = tfLight
         l.xEntrySpace = 7f
-        l.yEntrySpace = 5f
+        l.yEntrySpace = 3f
         l.textColor = Color.WHITE
-
+*/
 
         if(pokemon.types?.size == 2) {  // si tenemos dos slot, el pokemon tiene dos tipos
             AppExecutors.instance?.networkIO()?.execute (

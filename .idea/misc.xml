@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../../layout/custom_preview.xml" value="0.2140625" />
+        <entry key="..\:/Users/Ruben/Desktop/PokeWiki-Andr/app/src/main/res/layout/fragment_pokemon_comparison.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Ruben/Desktop/PokeWiki-Andr/app/src/main/res/layout/fragment_pokemon_details.xml" value="0.21770833333333334" />
         <entry key="app/src/main/res/drawable/circle.xml" value="0.37395833333333334" />
         <entry key="app/src/main/res/drawable/heart.xml" value="0.18125" />
         <entry key="app/src/main/res/drawable/hexagon.xml" value="0.37395833333333334" />
@@ -48,5 +50,5 @@
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>
