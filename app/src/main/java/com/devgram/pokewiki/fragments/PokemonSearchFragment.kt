@@ -77,7 +77,7 @@ class PokemonSearchFragment : Fragment() {
 
         lupa = v.findViewById(R.id.lupa)
         lupa.setOnClickListener {
-            if(search.text.toString().isNotEmpty()) filter(search.text.toString())
+            if(search.text.toString().isNotEmpty()) filter(search.text.toString().lowercase())
         }
 
         mRecyclerView = v.findViewById(R.id.pokemon_list) as RecyclerView
