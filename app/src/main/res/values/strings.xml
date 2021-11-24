@@ -29,12 +29,12 @@
     <string name="loc_esp">Spanish</string>
 
     <!-- Pokemon Team -->
-    <string name="cannot_create_team">Para crear el equipo rellene primero todos los huecos del equipo</string>
+    <string name="cannot_create_team">you first completed the team</string>
     <string name="accept">Accept</string>
     <string name="team_name">Team Name</string>
-    <string name="team_name_not_found">Debe de poner un nombre a el equipo</string>
-    <string name="title_team_name_not_found">Nombre no definido</string>
-    <string name="title_cannot_create_team">Equipo no completado</string>
+    <string name="team_name_not_found">You must put a team name</string>
+    <string name="title_team_name_not_found">Name not defined</string>
+    <string name="title_cannot_create_team">Team not compleated</string>
 
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
@@ -66,8 +66,7 @@
     <string name="SignInNameError">Incorrect name</string>
     <string name="SignInPasswordError">Incorrect password</string>
     <string name="edit">Edit</string>
-    <string name="create_1_team_title">Primer equipo</string>
-    <string name="create_1_team_descr">Crea tu primer equipo pokemon</string>
-
+    <string name="create_1_team_title">First team</string>
+    <string name="create_1_team_descr">Created your first team pokémon</string>
 
 </resources>
